@@ -1,4 +1,4 @@
-#include "Common.h"
+#include "../include/Common.h"
 
 void Common::logger(const std::string& _message, int _status = 0) {
 	auto now = std::chrono::system_clock::now();

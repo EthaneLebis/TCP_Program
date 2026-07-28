@@ -13,6 +13,9 @@
 #include <iostream>
 #include <string>
 #include <thread>
+#include <fstream>
+#include <mutex>
+#include <filesystem>
 
 #pragma comment(lib, "ws2_32.lib")
 

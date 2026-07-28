@@ -5,7 +5,7 @@
 class Server {
 	int		port;
 	SOCKET	serverSocket = INVALID_SOCKET;
-	int		isRunning = false;
+	bool		isRunning = false;
 
 	bool initWinsock();
 	bool createSocket();

@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Authentication.cpp" />
+    <ClCompile Include="src\Client.cpp" />
+    <ClCompile Include="src\Common.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Authentication.h" />
+    <ClInclude Include="include\Client.h" />
+    <ClInclude Include="include\Common.h" />
+    <ClInclude Include="include\Server.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,17 +151,6 @@
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Client.h" />
-    <ClInclude Include="Common.h" />
-    <ClInclude Include="Server.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Client.cpp" />
-    <ClCompile Include="Common.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Server.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

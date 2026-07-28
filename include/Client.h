@@ -3,7 +3,7 @@
 #include "Common.h"
 
 class Client {
-	SOCKET socket;
+	SOCKET _socket;
 	std::string clientIP;
 
 	std::string processMessage(const std::string& _message);
