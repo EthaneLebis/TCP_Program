@@ -19,7 +19,7 @@ std::string Client::processMessage(const std::string& _message) {
 
         Authentication user(arg);
         if (user.getId() != -1) {
-            return "OK: User created with ID " + std::to_string(user.getId() - 1);
+            return "OK: User created with ID " + std::to_string(user.getId());
         }
         return "ERROR: Could not write user to database file.";
     }

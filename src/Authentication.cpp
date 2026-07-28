@@ -13,32 +13,25 @@ Authentication::Authentication(std::string _name)
 	this -> id = saveUser(name);
 }
 
-int Authentication::getId() {
-	ensureDirectoryExists(DB_PATH);
-
+int Authentication::getNextId() {
 	std::ifstream userFile(DB_PATH);
 	if (!userFile.is_open()) return 1;
-
 	std::string line;
 	int maxId = 0;
-
 	while (std::getline(userFile, line)) {
-		if (line.empty()) continue;
-
 		std::istringstream iss(line);
 		int currentId;
-		if (iss >> currentId) {
-			if (currentId > maxId) maxId = currentId;
-		}
+		if (iss >> currentId && currentId > maxId)
+			maxId = currentId;
 	}
-
 	return maxId + 1;
 }
+
 
 int Authentication::saveUser(std::string _name) {
 	std::lock_guard<std::mutex> lock(dbMutex);
 
-	int newId = getId();
+	int newId = getNextId();
 
 	ensureDirectoryExists(DB_PATH);
 
